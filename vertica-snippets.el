@@ -1,9 +1,14 @@
 ;;; vertica-snippets.el --- Yasnippets for AWS
 
 ;; Copyright (C) 2018 Andreas Gerler
-;; keywords: snippets
+;; keywords: convenience,snippets
 ;; Version: 0.1.0
-;; Package-Requires: ((yasnippet "0.8.0"))
+;; Package-Requires: ((yasnippet "0.6.1"))
+
+;; Author: Andreas Gerler <baron@bundesbrandschatzamt.de>
+;; Maintainer: Andreas Gerler <baron@bundesbrandschatzamt.de>
+
+;; URL: https://github.com/baron42bba/vertica-snippets
 
 ;; Permission is hereby granted, free of charge, to any person obtaining
 ;; a copy of this software and associated documentation files (the
@@ -24,13 +29,20 @@
 ;; OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 ;; WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+;;; Commentary:
+
+;; A collection of yasnippet snippets to be used with the Vertica Analytics Platform
+
 ;;; Code:
+
+(require 'yasnippet)
 
 (defvar vertica-snippets-dir (file-name-directory (or (buffer-file-name)
                                                  load-file-name)))
 
 ;;;###autoload
 (defun vertica-snippets-initialize ()
+  "Add snippet dir to yas-snippet-dirs and load it."
   (let ((snip-dir (expand-file-name "snippets" vertica-snippets-dir)))
     (add-to-list 'yas-snippet-dirs snip-dir t)
     (yas-load-directory snip-dir)))
@@ -38,8 +50,6 @@
 ;;;###autoload
 (eval-after-load 'yasnippet
    '(vertica-snippets-initialize))
-
-(require 'yasnippet)
 
 (provide 'vertica-snippets)
 ;;; vertica-snippets.el ends here
