@@ -1,3 +1,4 @@
+[[http://melpa.org/#/vertica-snippets][file:http://melpa.org/packages/vertica-snippets-badge.svg]]
 * vertica-snippets
 yasnippet snippets for [[http://www.vertica.com][Vertica]]
 * Installation
