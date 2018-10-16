@@ -3,7 +3,7 @@
 yasnippet snippets for [[http://www.vertica.com][Vertica]]
 * Installation
 To install:
-
+- visit melpa or
 - clone this repository into =.emacs.d/=
 - add =(load ~/.emacs.d/vertica-snippets/vertica-snippets.el)= to your
   .emacs, after you load yasnippet!
