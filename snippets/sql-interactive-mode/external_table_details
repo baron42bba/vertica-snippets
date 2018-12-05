@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: external_table_details
+# key: etd_
+# --
+SELECT table_name, source_format, total_file_size_bytes FROM external_table_details;$0
