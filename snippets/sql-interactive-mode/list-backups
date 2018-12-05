@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: list-backups
+# key: ls_backups
+# --
+SELECT * FROM v_monitor.database_backups ORDER BY 1 DESC;$0
