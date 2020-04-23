@@ -7,8 +7,9 @@
 SELECT sysdate AS CURRENT_TIME,
        node_name,
        pool_name,
-       TO_CHAR( memory_inuse_kb / 1024, '999g999g999g999') AS memory_inuse_mb,
-       TO_CHAR( general_memory_borrowed_kb / 1024, '999g999g999g999') AS general_memory_borrowed_mb,
-       running_query_count
+       TO_CHAR( memory_inuse_kb / 1024 / 1024, '999g999g999g990d99') AS memory_inuse_gb,
+       TO_CHAR( general_memory_borrowed_kb / 1024 / 1024, '999g999g999g990d99') AS general_memory_borrowed_gb,
+       running_query_count,
+       max_concurrency
  FROM resource_pool_status
-ORDER BY 1,3,2;$0
+WHERE running_query_count > 0;$0
